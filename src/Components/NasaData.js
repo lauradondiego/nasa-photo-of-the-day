@@ -9,7 +9,7 @@ const NasaData = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-15`
+        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-14`
       )
       .then(response => {
         setImage(response.data.hdurl);
