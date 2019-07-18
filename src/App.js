@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 import NasaData from "./Components/NasaData";
 
 function App() {
