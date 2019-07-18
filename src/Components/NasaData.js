@@ -19,6 +19,7 @@ const NasaData = () => {
         console.log(response.data);
       });
   }, []);
+
   // the [] means you only want it it to load once/
 
   return (

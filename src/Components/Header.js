@@ -9,7 +9,9 @@ export const HeaderExampleUsersIcon = () => (
     <Header as="h2" icon textAlign="center">
       <Image src={header} circular />
       {/* <Icon name="users" circular /> */}
-      <Header.Content>NASA Photo of the Day</Header.Content>
+      <div className="HeaderContent">
+        <Header.Content>NASA Photo of the Day</Header.Content>
+      </div>
     </Header>
   </div>
 );
