@@ -3,13 +3,14 @@ import axios from "axios";
 import "../App.scss";
 
 const NasaData = () => {
+  //not passing any props bc i am using function components
   const [image, setImage] = useState();
   const [date, setDate] = useState();
 
   useEffect(() => {
-    axios 
+    axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-14`
+        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-15`
       )
       .then(response => {
         setImage(response.data.hdurl);
