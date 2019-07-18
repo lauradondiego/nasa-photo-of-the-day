@@ -7,7 +7,7 @@ const NasaData = () => {
   const [date, setDate] = useState();
 
   useEffect(() => {
-    axios
+    axios 
       .get(
         `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-14`
       )
