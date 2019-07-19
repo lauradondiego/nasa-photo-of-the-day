@@ -1,0 +1,34 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "../App.scss";
+
+const NasaData = () => {
+  //not passing any props bc i am using function components
+  const [image, setImage] = useState();
+  const [date, setDate] = useState();
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.nasa.gov/planetary/apod?api_key=Xvefu0SqsJGAOsSR2gTZfIAp71gxZ6ZCnqT9PuG2&date=2019-07-15`
+      )
+      .then(response => {
+        setImage(response.data.hdurl);
+        setDate(response.data.date);
+
+        console.log(response.data);
+      });
+  }, []);
+
+  // the [] means you only want it it to load once/
+
+  return (
+    <div className="App">
+      <h2>{date}</h2>
+      {/* we defined date in line 7 */}
+      <img src={image} style={{ maxWidth: "400px" }} alt="planet image" />
+      {/* javascript image needs curly */}
+    </div>
+  );
+};
+export default NasaData;
